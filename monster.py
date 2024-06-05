@@ -17,8 +17,11 @@ def monster():
 
 while True:
     e, v = win.read()
+    if e == "btn" and v["input"] == "":
+      sg.popup("名前を入力してください")
+      continue
     if e == "btn":
       monster()
     if e == None:
-        break
+      break
 win.close()
